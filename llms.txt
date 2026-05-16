@@ -1,0 +1,32 @@
+# Mohammad Hamza Portfolio
+
+Mohammad Hamza is a freelance web designer and frontend developer based in Aligarh, India.
+
+Core services:
+- UI/UX design
+- Frontend development
+- Responsive website development
+- Performance optimization
+- SEO optimization
+- Redesign services
+- Premium landing pages
+- Practical full-stack integrations
+
+Portfolio projects:
+- The Nextwork: Digital Marketing Agency. A sharp agency presence for a digital marketing team, 
+    rebuilt around fast navigation, direct inquiry paths and a confident service narrative. Live: https://thenextwork.in
+- MF Dresses: Fashion Commerce. A fast static commerce experience for a fashion label, shaped 
+    for quick product discovery, clean calls to action and smooth mobile browsing. Live: https://mfdresses.in
+- ISC Java: Education Platform. An interactive learning destination for Java students, designed
+    to make tutorials, practice and beginner concepts feel direct and approachable. Live: https://iscjava.vercel.app
+- LocalReach: Local Business Growth. A polished web presence for a local growth service, focused
+    on credibility, concise offers and lead capture for small business owners. Live: https://localreach.in
+- Caryaire Engineers: Bareilly‑based institutional infrastructure partner specialising in HVAC, 
+    procurement and turnkey execution for government and other various industrial sectors across India. Live: https://www.caryaireengineers.in
+- HMZAAA Portfolio: Personal Brand System. A high-end personal brand interface for Mohammad Hamza, 
+    engineered to communicate trust, speed and premium web craft within seconds. Live: https://hmzaaa.vercel.app
+
+Contact:
+- Email: hmzaaa.web@gmail.com
+- Phone: +91 63076 04170
+- Website: https://hmzaaa.vercel.app

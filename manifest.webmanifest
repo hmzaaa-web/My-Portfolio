@@ -1,0 +1,21 @@
+{
+  "name": "Mohammad Hamza Portfolio",
+  "short_name": "HMZAAA",
+  "description": "Premium portfolio website for Mohammad Hamza, freelance web designer and frontend developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030303",
+  "theme_color": "#030303",
+  "icons": [
+    {
+      "src": "assets/favicon/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
