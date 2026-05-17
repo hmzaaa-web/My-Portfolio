@@ -188,3 +188,87 @@ if (contactForm) {
     }
   });
 }
+
+// Site Loader
+(() => {
+  const loader = document.getElementById("site-loader");
+  if (!loader) return;
+
+  const count = loader.querySelector("[data-loader-count]");
+  const bar = loader.querySelector("[data-loader-bar]");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  let progress = 0;
+  let timer = null;
+
+  const setProgress = (value) => {
+    progress = Math.min(value, 100);
+
+    if (count) {
+      count.textContent = `${String(Math.round(progress)).padStart(2, "0")}%`;
+    }
+
+    if (bar) {
+      bar.style.width = `${progress}%`;
+    }
+  };
+
+  const showLoader = () => {
+    progress = 0;
+    setProgress(0);
+
+    loader.classList.remove("is-hidden");
+    document.body.classList.add("is-loading");
+
+    window.clearInterval(timer);
+
+    timer = window.setInterval(() => {
+      const next = progress + Math.random() * 14;
+      setProgress(next > 88 ? 88 : next);
+    }, reduceMotion ? 80 : 160);
+  };
+
+  const hideLoader = () => {
+    window.clearInterval(timer);
+    setProgress(100);
+
+    window.setTimeout(() => {
+      loader.classList.add("is-hidden");
+      document.body.classList.remove("is-loading");
+    }, reduceMotion ? 80 : 520);
+  };
+
+  showLoader();
+
+  window.addEventListener("load", hideLoader);
+
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      showLoader();
+      window.setTimeout(hideLoader, reduceMotion ? 120 : 520);
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest("a");
+    if (!link) return;
+
+    const href = link.getAttribute("href");
+    if (!href) return;
+
+    const isNewTab = link.target === "_blank";
+    const isDownload = link.hasAttribute("download");
+    const isExternal = link.origin !== window.location.origin;
+    const isHashOnly = href.startsWith("#");
+    const hasModifier = event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+
+    if (isNewTab || isDownload || isExternal || isHashOnly || hasModifier) return;
+
+    event.preventDefault();
+    showLoader();
+
+    window.setTimeout(() => {
+      window.location.href = link.href;
+    }, reduceMotion ? 80 : 320);
+  });
+})();
